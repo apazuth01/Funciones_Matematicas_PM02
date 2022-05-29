@@ -69,18 +69,25 @@ namespace Sumas
 
         private async void Dividir_Clicked(object sender, EventArgs e)
         {
-                if (String.IsNullOrEmpty(Numero1.Text) || (String.IsNullOrEmpty(Numero2.Text)))
+            int n1 = Convert.ToInt32(Numero1.Text);
+            int n2 = Convert.ToInt32(Numero2.Text);
+            if (n2.Equals(0))
+            {
+                _ = DisplayAlert("Division entre Cero", "El Valor a dividir es igual a Cero, Esto Provacaria una Excepcion de Error", "Volver");
+            }
+
+           else if (String.IsNullOrEmpty(Numero1.Text) || (String.IsNullOrEmpty(Numero2.Text)))
                 {
                     _ = DisplayAlert("Campos Vacios", "Hay un Campo Vacio! Favor Llenar Ambos Campos", "Volver");
                 }
                 else
                 {
-                    int n1 = Convert.ToInt32(Numero1.Text);
-            int n2 = Convert.ToInt32(Numero2.Text);
+            
             int dividir = n1 / n2;
             await Navigation.PushAsync(new Pagina_Resultado(dividir.ToString()));           
 
         }
-            }
+            
         }
+    }
 }
