@@ -7,10 +7,10 @@
         <Frame BackgroundColor="DarkGreen" 
                Padding="20" 
                CornerRadius="0">
-            <Label Text="Funciones Matematicas Agustin Paz Canales 201320010052" 
+            <Label Text="Ejercicio 1.1 Agustin Paz Canales 201320010052 Manfredi Guardado 201830010134" 
                    HorizontalTextAlignment="Center" 
                    TextColor="White" 
-                   FontSize="26"
+                   FontSize="18"
                    FontFamily=""/>
         </Frame>
         
